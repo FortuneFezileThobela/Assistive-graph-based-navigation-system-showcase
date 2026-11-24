@@ -23,8 +23,7 @@ A desktop-based assistive pedestrian navigation prototype developed as a group p
 
 ## End-to-End System Architecture
 
-### 1. Data Ingestion, Preprocessing & Graph Construction *(Fortune Fezile Thobela
-)*
+### 1. Data Ingestion, Preprocessing & Graph Construction *(Fortune Fezile Thobela)*
 * **Dataset & Database Setup:** Parses COCO JSON labels (annotations, categories, and segmentation data) into a relational database and loads image metadata into an in-memory lookup dictionary for fast access.
 * **Bounding-Box Partitioning & Ray-Casting Mask:** Splits images by bounding box regions and uses **ray casting** to build a virtual polygon mask that isolates tactile areas and reduces background noise.
 * **Multi-Stage Filtering & Vertex Extraction:** Applies stacked image filters (intensity conversion, smoothing, and gradient/edge detection) followed by **8-neighbor recursive peak finding** with minimum spacing checks to place unique vertices without duplicate nodes on the same feature.
